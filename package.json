@@ -1,0 +1,19 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "Project for code Institute for stream 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerekByrne/Project1.git"
+  },
+  "author": "Derek Byrne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DerekByrne/Project1/issues"
+  },
+  "homepage": "https://github.com/DerekByrne/Project1#readme"
+}
