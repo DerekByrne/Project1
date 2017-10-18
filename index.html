@@ -1,13 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="TodoApp">
 <head>
-    <title>Stream 1</title>
+    <title>XLR8Solutions</title>
     <base href="/"> <!-- needed for Angular HTML5 mode -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#585858">
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js" ></script>
+    <link rel="icon" type="image/png" href="imgs/fav.png">
+
+    
 </head>
-<body>
-    <h1>First project on code institute</h1>
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
+	<div scroll>
+	    <nav class='navbar nabcar-default navbar-fixed-top'>
+	    	<div>
+	    		<a class="navbar-brand" href='#' scroll-to='header'><img ng-src="{{ $scope.black && 'imgs/logo.png' || 'imgs/logo_black.png'}}"></a>
+	    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	    			<span class="fa fa-bars"></span>
+	    		</button>
+	    		<div class="collapse navbar-collapse" id="myNavbar">
+		    		<ul class="nav navbar-nav navbar-right smooth-scroll">
+		    			<li><a class="menubutton" href="#who" scroll-to='who'>Who we are</a></li>
+		    			<li><a class="menubutton" href="#what" scroll-to='what'>What we do</a></li>
+		    			<li><a class="menubutton" href="#clients" scroll-to='clients' >Clients</a></li>
+		    			<li><a class="menubutton" href="#contact" scroll-to='contact' >Contact</a></li>
+		    		</ul>
+		    	</div>
+	    	</div>
+	    </nav>
+	    <div class='video-container'>
+			<video id='video'  autoplay loop>
+			  <source src="vid/cj.mp4" type="video/mp4" />
+			  <source src="vid/cj.webm" type="video/webm" />
+			  Your browser does not support the video tag.
+			</video>
+		</div>
+
+
+<!-- ng-style="{'opacity' : }" -->
+
+		<div id='header'>
+			<div id='bannerholder' >
+				<div id='banner' class='whitetext'>XLR8Solutions</div>
+				<div id='subbanner' class='whitetext'>We want to take your ideas from a vision to a working reality. Be it, websites, apps or online marketing strategy.</div>
+				<a class='movetopage'  href="#who" scroll-to='who'><div id='learnmore' class='clickable'>Learn more</div></a>
+			</div>
+		</div>
+		<div ng-view>
+			
+
+		</div>
+
+
+	</div>
+
+	<script src="js/app.js"></script>
+	<script src="js/controller.js"></script>
+	<script src="js/directive.js"></script>
+
 </body>
 </html>
+
